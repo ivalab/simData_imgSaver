@@ -1,0 +1,34 @@
+<launch>
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="paused" default="true"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Load the sdf model only the parameter server -->
+  <param name="model_description" textfile="$(find 3D_warehouse)/models/bowl_01/sdf/description.sdf"/>
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="model_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-sdf -x 0 -y 0 -z 0 -param model_description -model bowl"/>
+
+  <!-- Load the URDF model only the parameter server -->
+  <param name="robot_description" textfile="$(find finalarm_released_v0)/urdf/finalarm_released_v0_gazebo_positioncontrol.urdf"/>
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-urdf -x -1 -y 0 -z 0.0 -model finalarm_released_v0 -param robot_description
+    "/>
+</launch>

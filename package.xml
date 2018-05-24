@@ -1,0 +1,17 @@
+<package>
+  <name>robotic_gazebo</name>
+  <version>1.0.0</version>
+  <description>
+    <p>Launch file for loading 3D model in gazbeo</p>
+  </description>
+  <author>me</author>
+  <maintainer email="gtsimonxu@gatech.edu" />
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>gazebo</run_depend>
+</package>

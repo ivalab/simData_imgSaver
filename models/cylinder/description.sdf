@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="cylinder">
+
+    <link name="cylinder_link">
+        <velocity_decay>
+          <linear>
+            0.5
+          </linear>
+        </velocity_decay>
+
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+
+      <collision name="cylinder_collision">
+        <surface>
+          <friction>
+            <bullet>
+              <friction>1.0</friction>
+              <friction2>1.0</friction2>  
+              <fdir1>0 0 0</fdir1>
+              <rolling_friction>1.0</rolling_friction>             
+            </bullet>
+          </friction>
+        </surface>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name="cylinder_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+      </visual>
+
+      <sensor name='cylinder_contact' type='contact'>
+        <contact>
+          <collision>cylinder_collision</collision>
+        </contact>
+      </sensor>
+
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="sphere">
+
+    <link name="sphere_link">
+        <velocity_decay>
+          <linear>
+            0.5
+          </linear>
+        </velocity_decay>
+
+        <inertial>
+          <mass>10</mass>
+        </inertial>
+
+      <collision name="sphere_collision">
+        <surface>
+          <friction>
+            <bullet>
+              <friction>1.0</friction>
+              <friction2>1.0</friction2>  
+              <fdir1>0 0 0</fdir1>
+              <rolling_friction>1.0</rolling_friction>             
+            </bullet>
+          </friction>
+        </surface>
+        <geometry>
+          <sphere>
+            <radius>0.04</radius>
+          </sphere>
+        </geometry>
+      </collision>
+
+      <visual name="sphere_visual">
+        <geometry>
+          <sphere>
+            <radius>0.04</radius>
+          </sphere>
+        </geometry>
+      </visual>
+
+      <sensor name='sphere_contact' type='contact'>
+        <contact>
+          <collision>sphere_collision</collision>
+        </contact>
+      </sensor>
+
+    </link>
+  </model>
+</sdf>
