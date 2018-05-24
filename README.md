@@ -32,6 +32,10 @@ copy all models to `/home/YOURNAME/.gazebo/models/`
 NOTE:   
 you can add `export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:/home/YOUR/PATH/TO/catkin_ws/src/simData_v2/warehouse/` in `~/.bashrc` 
 then you can might skip this step
+but change line 34:
+```
+fprintf(fsdf, ['            <uri>file://models/' FolderName '/mesh/' filename '.dae</uri>\n']);
+```
 
 ### Open Gazebo
 ```
