@@ -20,7 +20,7 @@ from cv_bridge import CvBridge, CvBridgeError
 object_pose = Pose(Point(0,0,0), Quaternion(1,0,0,0))
 gripper_open_value = -0.7
 PI    = 3.1415
-STEPS_OBJECT_POSE = 10
+STEPS_OBJECT_POSE = 100
 STEPS_CAM_POSE = 10
 HOME  = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))
 DEBUG = True
