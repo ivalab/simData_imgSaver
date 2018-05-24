@@ -92,8 +92,9 @@ def main():
 
 
             ### take data from kinect
-            rgb_data_tmp = rospy.wait_for_message("/camera/depth/image_raw/compressed", CompressedImage, None)
-            d_data_tmp = rospy.wait_for_message("/camera/depth/image_raw", Image, None)
+            for x in range(10):
+                rgb_data_tmp = rospy.wait_for_message("/camera/depth/image_raw/compressed", CompressedImage, None)
+                d_data_tmp = rospy.wait_for_message("/camera/depth/image_raw", Image, None)
 
 
             # save rgb images
@@ -154,8 +155,12 @@ def get_pose(x, y, z, R, P, Y):
 def rotate_pose_object(count, steps):
     #x = random.uniform(0.2, 0.6)
     #y = random.uniform(-0.3, 0.3)
-    x = 0.5
-    y = -0.2
+    steps_srt = math.sqrt(steps)
+    step_x = math.floor(count/steps_srt)
+    step_y = count%steps_srt
+    x = 0.5 - 0.1*0.5 + 0.1*step_x/steps_srt
+    y = -0.2 - 0.1*0.5 + 0.1*step_y/steps_srt
+
     z = 0.6
     #yaw = random.uniform(-1, 1) * PI
     yaw = count * ((2 * PI) / steps)
