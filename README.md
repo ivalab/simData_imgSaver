@@ -43,7 +43,8 @@ gazebo_ros gazebo
 ```
 
 ### Run imgSaver
-in `visuomotor_grasp_3D_Box.py` modify `MODEL_DIR` to `/home/YOUR/PATH/TO/catkin_ws/src/simData_v2/warehouse/models`
+in `visuomotor_grasp_3D_Box.py`    
+modify `MODEL_DIR` to `/home/YOUR/PATH/TO/catkin_ws/src/simData_v2/warehouse/models`
 ```
 python visuomotor_grasp_3D_Box.py
 ```
