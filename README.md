@@ -42,7 +42,7 @@ fprintf(fsdf, ['            <uri>file://models/' FolderName '/mesh/' filename '.
 gazebo_ros gazebo
 ```
 
-### Run imgSaver
+### Run imgSaver with object
 in `visuomotor_grasp_3D_Box.py`    
 modify `MODEL_DIR` to `/home/YOUR/PATH/TO/catkin_ws/src/simData_v2/warehouse/models`
 ```
@@ -50,5 +50,16 @@ python visuomotor_grasp_3D_Box.py
 ```
 the files will be saved to `/dataset`
 
+### Run imgSaver with affordance
+in `visuomotor_grasp_3D_Box_affordance.py`    
+modify `MODEL_DIR` to `/home/YOUR/PATH/TO/catkin_ws/src/simData_v2/warehouse/models`
+```
+python visuomotor_grasp_3D_Box_affordance.py
+```
+it loads corresponding affordance .dae files with dark table and highlight the affordance with specific color   
+the files will be saved to `/dataset`
+
+### Remove shadow effect
+When saving affordance images, the light source causes shadow and affects the color. The light source is not loadable in code (at lease in older version of Gazebo). One quick and effective solution is to add multiple light sources in Gazebo with GUI. Click on the parallel light source and select a location to place, and click on the icon again to turn it on. Also for tall object such as large mug, it is useful to also put several all-directional light source in front of the object.  
 
 
