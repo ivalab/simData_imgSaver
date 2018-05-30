@@ -66,4 +66,11 @@ When saving affordance images, the light source causes shadow and affects the co
 
 Click on the parallel light source and select a location to place, and click on the icon again to turn it on. Also for tall object such as large mug, it is useful to also put several all-directional light source in front of the object.  
 
+### Process real data
+To generate bonding boxes for UMD dataset, put `simData_imgSaver/utils/boundingBoxGenerator.m` in `YOUR/PATH/TO/UMD_affordance/part-affordance-dataset/` and run the script. 
 
+We segment the blue lazy Susan table and binarize the output to get the bounding boxes in HSV space. You can modify the value to adjust to your case.
+```
+hsv(:,:,3) > INTENSITY_T; % filter out black color  
+hsv(:,:,2) > 0.33; % filter out white color 
+```
