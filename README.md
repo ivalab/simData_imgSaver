@@ -74,3 +74,13 @@ We segment the blue lazy Susan table and binarize the output to get the bounding
 hsv(:,:,3) > INTENSITY_T; % filter out black color  
 hsv(:,:,2) > 0.33; % filter out white color 
 ```
+Real data with bounding box  
+<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/seg_hammer_01_00000007_rgb.jpg" height="360">  
+Sim data   
+<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/hammer_01_7.png" height="360">  
+Sim data with bounging box  
+<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/seg_hammer_01_7.png" height="360">  
+Sim data with grasp affordance  
+<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/hammer_01_gt_1_7.png" height="360">  
+Sim data with hit affordance  
+<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/hammer_01_gt_5_7.png" height="360">  
