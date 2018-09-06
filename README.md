@@ -62,7 +62,7 @@ the files will be saved to `/dataset`
 ### Remove shadow effect
 When saving affordance images, the light source causes shadow and affects the color. The light source is not loadable in code (at lease in older version of Gazebo). One quick and effective solution is to add multiple light sources in Gazebo with GUI. 
 
-<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/lightSource.png" height="30">
+<img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/lightSource.png" height="30">
 
 Click on the parallel light source and select a location to place, and click on the icon again to turn it on. Also for tall object such as large mug, it is useful to also put several all-directional light source in front of the object.  
 
@@ -75,12 +75,12 @@ hsv(:,:,3) > INTENSITY_T; % filter out black color
 hsv(:,:,2) > 0.33; % filter out white color 
 ```
 Real data with bounding box  
-<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/seg_hammer_01_00000007_rgb.jpg" height="360">  
+<img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/seg_hammer_01_00000007_rgb.jpg" height="360">  
 Sim data   
-<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/hammer_01_7.png" height="360">  
+<img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/hammer_01_7.png" height="360">  
 Sim data with bounging box  
-<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/seg_hammer_01_7.png" height="360">  
+<img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/seg_hammer_01_7.png" height="360">  
 Sim data with grasp affordance  
-<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/hammer_01_gt_1_7.png" height="360">  
+<img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/hammer_01_gt_1_7.png" height="360">  
 Sim data with hit affordance  
-<img src="https://github.gatech.edu/fchu9/simData_imgSaver/blob/master/imgs/hammer_01_gt_5_7.png" height="360">  
+<img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/hammer_01_gt_5_7.png" height="360">  
