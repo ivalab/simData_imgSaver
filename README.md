@@ -84,3 +84,6 @@ Sim data with grasp affordance
 <img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/hammer_01_gt_1_7.png" height="360">  
 Sim data with hit affordance  
 <img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/hammer_01_gt_5_7.png" height="360">  
+
+### Contact
+If you encounter any questions, please contact me at fujenchu[at]gatech[dot]edu
