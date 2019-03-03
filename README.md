@@ -85,5 +85,22 @@ Sim data with grasp affordance
 Sim data with hit affordance  
 <img src="https://github.com/ivalab/simData_imgSaver/blob/master/imgs/hammer_01_gt_5_7.png" height="360">  
 
+### Citation
+If you find it helpful for your research, please consider citing:
+
+    @inproceedings{chu2019learning,
+      title = {Learning Affordance Segmentation for Real-world Robotic Manipulation via Synthetic Images},
+      author = {F. Chu and R. Xu and P. A. Vela},
+      journal = {IEEE Robotics and Automation Letters},
+      year = {2019},
+      volume = {4},
+      number = {2},
+      pages = {1140-1147},
+      DOI = {10.1109/LRA.2019.2894439},
+      ISSN = {2377-3766},
+      month = {April}
+    }
+
+
 ### Contact
 If you encounter any questions, please contact me at fujenchu[at]gatech[dot]edu
