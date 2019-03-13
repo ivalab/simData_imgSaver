@@ -6,7 +6,7 @@ ros package for saving simulation images in Gazebo with Kinect
 
 ```
 cd ~/catkin_ws/src/
-git clone https://github.gatech.edu/fchu9/simData_imgSaver.git
+git clone https://github.com/ivalab/simData_imgSaver.git
 cd ..
 catkin_make
 ```
@@ -14,7 +14,7 @@ catkin_make
 ### Clone the simData
 ```
 cd ~/catkin_ws/src/
-git clone https://github.gatech.edu/fchu9/simData_v2.git 
+git clone https://github.com/ivalab/simData.git 
 ```
 rename the `/3Dwarehouse/tools` to `/warehouse/models` 
 
