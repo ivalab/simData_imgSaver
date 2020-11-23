@@ -39,7 +39,7 @@ fprintf(fsdf, ['            <uri>file://models/' FolderName '/mesh/' filename '.
 
 ### Open Gazebo
 ```
-gazebo_ros gazebo
+rosrun gazebo_ros gazebo
 ```
 
 ### Run imgSaver with object
