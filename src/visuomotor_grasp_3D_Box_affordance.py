@@ -16,17 +16,19 @@ import tf
 import numpy as np
 from cv_bridge import CvBridge, CvBridgeError
 import math
+from pathlib import Path
 
 #globals
 object_pose = Pose(Point(0,0,0), Quaternion(1,0,0,0))
 gripper_open_value = -0.7
 PI    = 3.1415
 STEPS_OBJECT_POSE = 400
-HOME  = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))
+HOME  = Path(__file__ ).parent.parent.as_posix()
 DEBUG = True
 RGB_IMG_DIR = HOME + "/dataset/RGB_image"
 DEPTH_IMG_DIR = HOME + "/dataset/DEPTH_image"
-MODEL_DIR = "/home/fujenchu/projects/robotArm/catkin_ws/src/simData/warehouse/models"
+# OR output from `rospack plugins --attrib=gazebo_model_path gazebo_ros `
+MODEL_DIR = f"{Path(HOME).parent.as_posix()}/simData/models"
 
 ### ros service proxies
 print("Waiting for gazebo servies, be sure to spawn gazebo_ros with rosrun gazebo_ros gazebo or rosrun gazebo_ros gzserver")
