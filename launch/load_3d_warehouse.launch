@@ -18,17 +18,16 @@
   </include>
 
   <!-- Load the sdf model only the parameter server -->
-  <param name="model_description" textfile="$(find warehouse)/warehouse/models/bowl_01/sdf/description.sdf"/>
+  <param name="model_description" textfile="$(find warehouse)/models/bowl_01/sdf/description.sdf"/>
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="model_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
     args="-sdf -x 0 -y 0 -z 0 -param model_description -model bowl"/>
 
   <!-- Load the URDF model only the parameter server -->
-  <param name="robot_description" textfile="$(find finalarm_released_v0)/urdf/finalarm_released_v0_gazebo_positioncontrol.urdf"/>
+  <param name="robot_description" textfile="$(find edy_dualarm_description)/urdf/edy_dualarm_description.urdf"/>
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-    args="-urdf -x -1 -y 0 -z 0.0 -model finalarm_released_v0 -param robot_description
-    "/>
+    args="-urdf -x -1 -y 0 -z 0.0 -model edy_dualarm -param robot_description"/>
 </launch>
