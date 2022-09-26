@@ -44,7 +44,7 @@ object_pose = Pose(Point(0,0,0), Quaternion(1,0,0,0))
 gripper_open_value = -0.7
 PI    = 3.1415
 STEPS_ARM_POSE = 100
-STEPS_OBEJCT_NUM = 90
+STEPS_object_NUM = 90
 STEPS_OBJECT_RANDOM_POSE = 1
 STEPS_OBJECT_CLOSE_POSE = 1
 STEPS_CAM_POSE = 1
@@ -77,7 +77,7 @@ get_position_ik = rospy.ServiceProxy('/compute_ik', GetPositionIK)
 
 def main():
     ### start node
-    rospy.init_node('gazebo_arm_obejct')
+    rospy.init_node('gazebo_arm_object')
 
     #initialize publishers for 9 motors
     pub_1 = rospy.Publisher('/finalarm_released_v0/joint_1_position_controller/command', Float64, queue_size=5)
@@ -141,11 +141,11 @@ def main():
         # loop for different object model #
         ###################################
         count_object_num = 0
-        while count_object_num < STEPS_OBEJCT_NUM:
+        while count_object_num < STEPS_object_NUM:
             ### loop for diff random object pose
-            count_obejct_random_pose = 0
+            count_object_random_pose = 0
             count_object_close_pose = 0
-            while count_obejct_random_pose < STEPS_OBJECT_RANDOM_POSE:
+            while count_object_random_pose < STEPS_OBJECT_RANDOM_POSE:
                 #generate new pose for object
                 pose_obj = random_pose_object(req.pose_stamped.pose.position.x, req.pose_stamped.pose.position.y)
                 #pose_obj = Pose(Point(0.40,0.2,0.63),Quaternion(1, 0, 0, 0))
@@ -274,7 +274,7 @@ def main():
                     count_cam_pose += 1
 
                 ###increment count for obj pose
-                count_obejct_random_pose += 1
+                count_object_random_pose += 1
 
             ###################################
             # loop for diff close object pose #
@@ -415,7 +415,7 @@ def main():
             delete_model("object")
 
             ###wait the object model to be deleted
-            while "obejct" in world_properties.model_names:
+            while "object" in world_properties.model_names:
                 world_properties = get_world_properties()
 
             ###increment count for obj no

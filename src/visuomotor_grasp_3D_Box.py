@@ -48,7 +48,7 @@ get_world_properties = rospy.ServiceProxy('/gazebo/get_world_properties', GetWor
 
 def main():
     ### start node
-    rospy.init_node('gazebo_arm_obejct')
+    rospy.init_node('gazebo_arm_object')
 
     world_properties = get_world_properties()
     if DEBUG: print("World properties: "); print(world_properties); print("\n")
