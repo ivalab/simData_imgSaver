@@ -18,7 +18,7 @@
   </include>
 
   <!-- Load the sdf model only the parameter server -->
-  <param name="model_description" textfile="$(find 3D_warehouse)/models/bowl_01/sdf/description.sdf"/>
+  <param name="model_description" textfile="$(find warehouse)/warehouse/models/bowl_01/sdf/description.sdf"/>
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="model_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
