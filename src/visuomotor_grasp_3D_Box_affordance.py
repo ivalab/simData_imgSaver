@@ -28,7 +28,7 @@ DEBUG = True
 RGB_IMG_DIR = HOME + "/dataset/RGB_image"
 DEPTH_IMG_DIR = HOME + "/dataset/DEPTH_image"
 # OR output from `rospack plugins --attrib=gazebo_model_path gazebo_ros `
-MODEL_DIR = f"{Path(HOME).parent.as_posix()}/simData/models"
+MODEL_DIR = HOME + "/../simData/models"
 
 ### ros service proxies
 print("Waiting for gazebo servies, be sure to spawn gazebo_ros with rosrun gazebo_ros gazebo or rosrun gazebo_ros gzserver")

@@ -17,11 +17,19 @@
 
   <run_depend>roslaunch</run_depend>
   <run_depend>rospy</run_depend>
-  <run_depend>gazebo_ros</run_depend>
   <run_depend>gazebo</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_pkgs</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>joint_state_publisher</run_depend>
   <run_depend>rviz</run_depend>
   <run_depend>edy_dualarm_description</run_depend>
   <run_depend>warehouse</run_depend>
+
+  <export>
+    <gazebo_ros
+      gazebo_plugin_path="${prefix}/lib"
+      gazebo_model_path="${prefix}/models"
+    />
+  </export>
 </package>

@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.4">
   <model name="kinect_ros">
     <link name="link">
