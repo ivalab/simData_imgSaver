@@ -1,8 +1,10 @@
-<?xml version="1.0" ?>
-<gazebo version="1.2">
+<?xml version="1.0"?>
+<sdf version="1.4">
   <model name="kinect_ros">
-    <pose>0.5 -0.55 1.05 0 0.8722 1.57</pose>
     <link name="link">
+      <gravity>false</gravity>
+      <pose>0.5 -0.55 1.05 0 0.8722 1.57</pose>
+
       <inertial>
         <mass>0.1</mass>
       </inertial>
@@ -21,9 +23,13 @@
           </mesh>
         </geometry>
       </visual>
+    </link>
 
+    <gazebo reference="link">
       <sensor name="camera" type="depth">
         <update_rate>20</update_rate>
+        <visualize>1</visualize>
+        <always_on>1</always_on>
         <camera>
           <horizontal_fov>1.047198</horizontal_fov>
           <image>
@@ -40,7 +46,7 @@
           <baseline>0.2</baseline>
           <alwaysOn>true</alwaysOn>
           <!-- Keep this zero, update_rate in the parent <sensor> tag
-            will control the frame rate. -->
+          will control the frame rate. -->
           <updateRate>0.0</updateRate>
           <cameraName>camera_ir</cameraName>
           <imageTopicName>/camera/depth/image_raw</imageTopicName>
@@ -62,7 +68,7 @@
           <hackBaseline>0</hackBaseline>
         </plugin>
       </sensor>
-    </link>
+    </gazebo>
     <static>true</static>
   </model>
-</gazebo>
+</sdf>

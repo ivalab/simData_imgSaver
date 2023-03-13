@@ -1,2 +1,4 @@
 dataset/DEPTH_image/
 dataset/RGB_image/
+# emacs files
+*~

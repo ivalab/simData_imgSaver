@@ -2,11 +2,16 @@ cmake_minimum_required(VERSION 2.8.3)
 
 project(robotic_gazebo)
 
-find_package(catkin REQUIRED COMPONENTS rospy)
+find_package(catkin REQUIRED COMPONENTS)
 
-catkin_package()
-
-find_package(roslaunch)
+catkin_package(
+	CATKIN_DEPENDS
+		roslaunch
+		rospy
+		gazebo_ros
+		edy_dualarm_description
+		warehouse
+)
 
 foreach(dir launch src)
 	install(DIRECTORY ${dir}/
