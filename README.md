@@ -16,7 +16,6 @@ catkin_make
 cd ~/catkin_ws/src/
 git clone https://github.com/ivalab/simData.git 
 ```
-rename the `/3Dwarehouse/tools` to `/warehouse/models` 
 
 ### Preprocess data
 in `utils/move_model_files.m`
